@@ -6,7 +6,7 @@ import ResourcesPage from './pages/ResourcesPage';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <div className="min-h-screen font-cairo">
         <Navbar />
         <Routes>

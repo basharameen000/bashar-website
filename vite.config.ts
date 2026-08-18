@@ -11,6 +11,7 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
+    base: mode === 'github-pages' ? '/bashar-website/' : '/',
     plugins: [react(), tailwindcss()],
     envPrefix: ['VITE_', 'NEXT_PUBLIC_'],
     define: processEnvDefines,
