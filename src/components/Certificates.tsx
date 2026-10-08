@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Award, Leaf, GraduationCap, Calendar, MapPin, Building2 } from 'lucide-react';
-import { totCertificates, climateCertificates, otherCourses } from '../data/certificates';
+import { Award, Leaf, GraduationCap, Calendar, MapPin, Building2, Maximize2 } from 'lucide-react';
+import { totCertificates, climateCertificates, otherCourses, CertificateItem } from '../data/certificates';
+import MediaFallback from './MediaFallback';
+import MediaLightbox from './MediaLightbox';
+import SmartCardMedia from './SmartCardMedia';
 
 const tabs = [
   { key: 'tot', label: 'شهائد تدريب المدربين', icon: GraduationCap, data: totCertificates, color: 'indigo' },
@@ -44,6 +47,19 @@ const colorMap: Record<string, { bar: string; badge: string; badgeText: string; 
 
 export default function Certificates() {
   const [activeTab, setActiveTab] = useState('tot');
+  const [selectedMedia, setSelectedMedia] = useState<{
+    isOpen: boolean;
+    title: string;
+    category?: string;
+    description?: string;
+    images: string[];
+    pdfUrl?: string;
+  }>({
+    isOpen: false,
+    title: '',
+    images: [],
+  });
+
   const active = tabs.find((t) => t.key === activeTab)!;
   const cs = colorMap[active.color];
 
@@ -70,7 +86,7 @@ export default function Certificates() {
             مسار التعليم و<span className="gradient-text">التأهيل</span>
           </h2>
           <p className="mx-auto max-w-2xl text-base leading-8 text-slate-500 dark:text-slate-400">
-            مجموعة من الشهائد والدورات التدريبية في مجالات الحوكمة والمناخ وإدارة المشاريع.
+            مجموعة من الشهائد والدورات التدريبية المعتمدة مع معاينات صورية ووثائق رسمية.
           </p>
         </motion.div>
 
@@ -121,42 +137,87 @@ export default function Certificates() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.3 }}
-            className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
           >
-            {active.data.map((item, index) => (
+            {(active.data as CertificateItem[]).map((item, index) => (
               <motion.div
                 key={item.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
                 whileHover={{ y: -5, scale: 1.02 }}
-                className="group relative overflow-hidden rounded-2xl border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 p-5 shadow-sm transition-all duration-500 hover:shadow-xl"
+                className="group relative overflow-hidden rounded-2xl border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm transition-all duration-500 hover:shadow-xl flex flex-col justify-between"
               >
-                {/* Accent border on hover */}
-                <div className={`absolute left-0 top-0 h-full w-1 ${cs.bar} opacity-0 transition-opacity group-hover:opacity-100`} />
-                <div className="mb-3 flex items-center gap-2">
-                  <span className={`inline-flex items-center gap-1 rounded-lg ${cs.badge} ${cs.badgeText} ${cs.darkBadge} ${cs.darkBadgeText} px-2.5 py-1 text-xs font-bold`}>
-                    <Calendar className="h-3 w-3" />
-                    {item.date}
-                  </span>
+                {/* Top Image / Media Cover Banner */}
+                <div className="relative h-56 md:h-60 w-full overflow-hidden border-b border-slate-100 dark:border-slate-700/60 bg-slate-950">
+                  <SmartCardMedia
+                    src={item.image}
+                    alt={item.title}
+                    title={item.title}
+                    category={item.badge || active.label}
+                    icon={active.icon}
+                    colorScheme={active.color as any}
+                    subtitle={item.org}
+                    onClick={() =>
+                      setSelectedMedia({
+                        isOpen: true,
+                        title: item.title,
+                        category: item.badge || active.label,
+                        description: `${item.org} — ${item.location}`,
+                        images: item.gallery && item.gallery.length > 0 ? item.gallery : [item.image!],
+                        pdfUrl: item.pdfUrl,
+                      })
+                    }
+                  />
                 </div>
-                <h3 className="mb-3 text-sm font-bold leading-7 text-slate-900 dark:text-white">
-                  {item.title}
-                </h3>
-                <div className="space-y-2">
-                  <div className="flex items-start gap-2 text-xs text-slate-500 dark:text-slate-400">
-                    <Building2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500 dark:text-emerald-400" />
-                    <span>{item.org}</span>
+
+                {/* Card Content Body */}
+                <div className="p-5 flex-1 flex flex-col justify-between">
+                  <div>
+                    {/* Accent border on hover */}
+                    <div className={`absolute left-0 top-0 h-full w-1 ${cs.bar} opacity-0 transition-opacity group-hover:opacity-100`} />
+                    <div className="mb-3 flex items-center justify-between gap-2">
+                      <span className={`inline-flex items-center gap-1 rounded-lg ${cs.badge} ${cs.badgeText} ${cs.darkBadge} ${cs.darkBadgeText} px-2.5 py-1 text-xs font-bold`}>
+                        <Calendar className="h-3 w-3" />
+                        {item.date}
+                      </span>
+                      {item.badge && (
+                        <span className="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 px-2 py-0.5 rounded-md border border-emerald-200 dark:border-emerald-800">
+                          {item.badge}
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="mb-3 text-sm font-bold leading-6 text-slate-900 dark:text-white line-clamp-2">
+                      {item.title}
+                    </h3>
                   </div>
-                  <div className="flex items-start gap-2 text-xs text-slate-500 dark:text-slate-400">
-                    <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500 dark:text-emerald-400" />
-                    <span>{item.location}</span>
+
+                  <div className="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-700/50">
+                    <div className="flex items-start gap-2 text-xs text-slate-500 dark:text-slate-400">
+                      <Building2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500 dark:text-emerald-400" />
+                      <span className="line-clamp-1">{item.org}</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-xs text-slate-500 dark:text-slate-400">
+                      <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-500 dark:text-emerald-400" />
+                      <span>{item.location}</span>
+                    </div>
                   </div>
                 </div>
               </motion.div>
             ))}
           </motion.div>
         </AnimatePresence>
+
+        {/* Media Lightbox Zoom Modal */}
+        <MediaLightbox
+          isOpen={selectedMedia.isOpen}
+          onClose={() => setSelectedMedia((prev) => ({ ...prev, isOpen: false }))}
+          title={selectedMedia.title}
+          category={selectedMedia.category}
+          description={selectedMedia.description}
+          images={selectedMedia.images}
+          pdfUrl={selectedMedia.pdfUrl}
+        />
       </div>
     </section>
   );

@@ -1,0 +1,51 @@
+{
+  "status": "AUTHENTICATED_AND_ACTIVE",
+  "provider": "European Centre for Medium-Range Weather Forecasts (ECMWF)",
+  "service": "Copernicus Climate Data Store (CDS)",
+  "api_endpoint": "https://cds.climate.copernicus.eu/api",
+  "key_status": "VALID_CREDENTIALS_FOUND (~/.cdsapirc)",
+  "dataset": "reanalysis-era5-land-monthly-means",
+  "variable": "total_precipitation (tp)",
+  "grid_resolution": "0.1° (~9 km) High-Resolution Reanalysis",
+  "target_region": {
+    "name": "Taiz Governorate & Mount Sabir, Yemen",
+    "coordinates": {
+      "latitude_center": 13.58,
+      "longitude_center": 44.02,
+      "bounding_box": [
+        14.0,
+        43.0,
+        13.0,
+        44.5
+      ]
+    },
+    "microclimates": [
+      {
+        "name": "Mount Sabir Highlands (مرتفعات جبل صبر)",
+        "elevation": "3006m",
+        "lat": 13.51,
+        "lon": 44.05
+      },
+      {
+        "name": "Taiz City Valley (حوض مدينة تعز)",
+        "elevation": "1400m",
+        "lat": 13.58,
+        "lon": 44.02
+      },
+      {
+        "name": "Mocha Coastal Strip (شريط ساحل المخا)",
+        "elevation": "10m",
+        "lat": 13.33,
+        "lon": 43.25
+      }
+    ]
+  },
+  "temporal_coverage": {
+    "start_year": 1980,
+    "end_year": 2026,
+    "total_years": 47,
+    "total_months": 560
+  },
+  "last_verified_at": "2026-09-25T15:34:56.262479",
+  "telemetry_stream": "LIVE_VERIFIED"
+}

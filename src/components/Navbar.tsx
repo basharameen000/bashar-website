@@ -91,6 +91,16 @@ export default function Navbar() {
             </Link>
           )}
           <Link
+            to="/blog"
+            className={`text-sm font-semibold transition px-3 py-1.5 rounded-lg ${
+              location.pathname === '/blog'
+                ? 'text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40'
+                : 'text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400'
+            }`}
+          >
+            المدوّنة والأوراق
+          </Link>
+          <Link
             to="/resources"
             className={`rounded-full px-5 py-2 text-sm font-semibold shadow-lg transition ${
               location.pathname === '/resources'
@@ -154,6 +164,17 @@ export default function Navbar() {
                   الرئيسية
                 </Link>
               )}
+              <Link
+                to="/blog"
+                onClick={() => setOpen(false)}
+                className={`rounded-lg px-3 py-2 font-medium transition ${
+                  location.pathname === '/blog'
+                    ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600'
+                    : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
+                }`}
+              >
+                المدوّنة والأوراق
+              </Link>
               <Link
                 to="/resources"
                 onClick={() => setOpen(false)}

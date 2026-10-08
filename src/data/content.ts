@@ -116,7 +116,21 @@ export const skills = [
   'الوساطة المجتمعية',
 ];
 
-export const trainings = [
+export interface TrainingItem {
+  id: string;
+  date: string;
+  title: string;
+  participants: number | null;
+  audience: string;
+  groups: string;
+  partners: string;
+  category: string;
+  image?: string;
+  gallery?: string[];
+  pdfUrl?: string;
+}
+
+export const trainings: TrainingItem[] = [
   {
     id: 't01',
     date: '29/7 – 11/8 2025',
@@ -126,6 +140,7 @@ export const trainings = [
     groups: '4 مجموعات تمثل 4 قرى من مديرية تبن – محافظة لحج',
     partners: 'المركز الوطني لتثقيف والإعلام الصحي – اليونيسف',
     category: 'البيئة والمناخ',
+    image: '/images/trainings/t01.jpg',
   },
   {
     id: 't02',
@@ -136,6 +151,7 @@ export const trainings = [
     groups: 'مجموعتين',
     partners: 'مكتب التربية والتعليم – محافظة لحج – اليونيسف',
     category: 'التعليم المناخي',
+    image: '/images/trainings/t02.jpg',
   },
   {
     id: 't03',
@@ -146,6 +162,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'مكتب التربية والتعليم – محافظة لحج – اليونيسف',
     category: 'التعليم المناخي',
+    image: '/images/trainings/t03.jpg',
   },
   {
     id: 't04',
@@ -156,6 +173,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'منظمة كير العالمية – اليمن – مركز الارتقاء للتدريب والاستشارات',
     category: 'السلام البيئي',
+    image: '/images/trainings/t04.jpg',
   },
   {
     id: 't05',
@@ -166,6 +184,7 @@ export const trainings = [
     groups: 'ندوة',
     partners: 'منظمة Woman impact – مؤسسة مظلة – عدن',
     category: 'المناصرة المناخية',
+    image: '/images/trainings/t05.jpg',
   },
   {
     id: 't06',
@@ -176,6 +195,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'مركز تدريب وتأهيل الشباب – عدن – وزارة الشباب والرياضة',
     category: 'إدارة المشاريع',
+    image: '/images/trainings/t06.jpg',
   },
   {
     id: 't07',
@@ -186,6 +206,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'مركز تدريب وتأهيل الشباب – عدن – وزارة الشباب والرياضة',
     category: 'الحكم المحلي',
+    image: '/images/trainings/t07.jpg',
   },
   {
     id: 't08',
@@ -196,6 +217,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'مركز تدريب وتأهيل الشباب – عدن – وزارة الشباب والرياضة',
     category: 'الحوكمة',
+    image: '/images/trainings/t08.jpg',
   },
   {
     id: 't09',
@@ -206,6 +228,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'مركز تدريب وتأهيل الشباب – عدن – وزارة الشباب والرياضة',
     category: 'تدريب المدربين',
+    image: '/images/trainings/t09.jpg',
   },
   {
     id: 't10',
@@ -216,6 +239,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'مركز تدريب وتأهيل الشباب – عدن – مبادرة Climate Peace',
     category: 'السلام البيئي',
+    image: '/images/trainings/t10.jpg',
   },
   {
     id: 't11',
@@ -226,6 +250,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'مؤسسة رموز – عدن',
     category: 'الطوارئ المناخية',
+    image: '/images/trainings/t11.jpg',
   },
   {
     id: 't12',
@@ -236,6 +261,7 @@ export const trainings = [
     groups: 'ورقة سياسات',
     partners: 'مؤسسة رموز لتنمية الصم – عدن',
     category: 'البحث والمناصرة',
+    image: '/images/trainings/t12.jpg',
   },
   {
     id: 't13',
@@ -246,6 +272,7 @@ export const trainings = [
     groups: 'ورشة عمل',
     partners: 'منظمة أجيال بالقات – مارب',
     category: 'الريادة البيئية',
+    image: '/images/trainings/t13.jpg',
   },
   {
     id: 't14',
@@ -256,6 +283,7 @@ export const trainings = [
     groups: 'ورقة بحثية',
     partners: '—',
     category: 'البحث والمناصرة',
+    image: '/images/trainings/t14.jpg',
   },
   {
     id: 't15',
@@ -266,6 +294,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'مركز تأهيل وتدريب الشباب – عدن – وزارة الشباب والرياضة – UNFPA',
     category: 'المهارات الإدارية',
+    image: '/images/trainings/t15.jpg',
   },
   {
     id: 't16',
@@ -276,6 +305,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'مبادرة شباب فاعل – عدن',
     category: 'الصحة والمناخ',
+    image: '/images/trainings/t16.jpg',
   },
   {
     id: 't17',
@@ -286,6 +316,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'منظمة شباب التجديد – بدعم من المركز السويدي – تعز',
     category: 'الحوكمة والسلام',
+    image: '/images/trainings/t17.jpg',
   },
   {
     id: 't18',
@@ -296,6 +327,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'مركز تأهيل وتدريب الشباب – عدن – وزارة الشباب والرياضة – UNFPA',
     category: 'حوكمة المبادرات',
+    image: '/images/trainings/t18.jpg',
   },
   {
     id: 't19',
@@ -306,6 +338,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'منظمة رفع للتنمية – عدن',
     category: 'التنمية المستدامة',
+    image: '/images/trainings/t19.jpg',
   },
   {
     id: 't20',
@@ -316,6 +349,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'مؤسسة الخضيرة – لحج – مشروع التمكين الاقتصادي لشباب/ات مناطق النزاع',
     category: 'الحوكمة والتمكين',
+    image: '/images/trainings/t20.jpg',
   },
   {
     id: 't21',
@@ -326,6 +360,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'مركز تأهيل وتدريب الشباب – عدن – وزارة الشباب والرياضة',
     category: 'المهارات الحياتية',
+    image: '/images/trainings/t21.jpg',
   },
   {
     id: 't22',
@@ -336,6 +371,7 @@ export const trainings = [
     groups: 'فريق العمل',
     partners: 'منظمة رفع للتنمية – عدن',
     category: 'الحوكمة البيئية',
+    image: '/images/trainings/t22.jpg',
   },
   {
     id: 't23',
@@ -346,6 +382,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'فريق مبادرة فينا خير – تعز',
     category: 'إدارة المبادرات',
+    image: '/images/trainings/t23.jpg',
   },
   {
     id: 't24',
@@ -356,6 +393,7 @@ export const trainings = [
     groups: 'مجموعة واحدة',
     partners: 'منظمة نودس يمن – تعز',
     category: 'الحوكمة المجتمعية',
+    image: '/images/trainings/t24.jpg',
   },
 ];
 

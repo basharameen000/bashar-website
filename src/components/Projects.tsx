@@ -12,8 +12,13 @@ import {
   MapPin,
   Building,
   Layers,
+  Maximize2,
+  Sparkles,
 } from 'lucide-react';
-import { groupedTrainings } from '../data/content';
+import { groupedTrainings, categoryGroups } from '../data/content';
+import MediaFallback from './MediaFallback';
+import MediaLightbox from './MediaLightbox';
+import SmartCardMedia from './SmartCardMedia';
 
 const tabMeta = [
   { key: 'البيئة والمناخ', label: 'البيئة والمناخ', icon: Leaf, color: 'emerald' },
@@ -80,6 +85,17 @@ const colorMap: Record<string, { active: string; bg: string; text: string; borde
 export default function Projects() {
   const [activeTab, setActiveTab] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [selectedMedia, setSelectedMedia] = useState<{
+    isOpen: boolean;
+    title: string;
+    category?: string;
+    description?: string;
+    images: string[];
+  }>({
+    isOpen: false,
+    title: '',
+    images: [],
+  });
 
   const currentTab = tabMeta[activeTab];
   const currentColor = colorMap[currentTab.color];
@@ -237,7 +253,7 @@ export default function Projects() {
                       opacity: Math.abs(offset) > 1 ? 0 : isActive ? 1 : 0.4,
                     }}
                     transition={{ duration: 0.6, type: 'spring', stiffness: 120, damping: 18 }}
-                    className={`${isActive ? 'relative z-20' : 'absolute inset-0 z-10'} rounded-3xl border bg-white dark:bg-slate-800 p-7 shadow-lg`}
+                    className={`${isActive ? 'relative z-20' : 'absolute inset-0 z-10'} rounded-3xl border bg-white dark:bg-slate-800 p-6 md:p-7 shadow-lg overflow-hidden flex flex-col justify-between`}
                     style={{
                       transformStyle: 'preserve-3d',
                       borderColor: isActive ? '#10b981' : '#e2e8f0',
@@ -246,11 +262,33 @@ export default function Projects() {
                         : '0 10px 30px -10px rgba(0,0,0,0.1)',
                     }}
                   >
+                    {/* Card Media Header Container */}
+                    <div className="relative mb-5 -mx-6 -mt-6 md:-mx-7 md:-mt-7 h-60 md:h-64 overflow-hidden rounded-t-3xl border-b border-slate-100 dark:border-slate-700/60 bg-slate-950">
+                      <SmartCardMedia
+                        src={item.image}
+                        alt={item.title}
+                        title={item.title}
+                        category={item.category}
+                        icon={currentTab.icon}
+                        colorScheme={currentColorKey as any}
+                        subtitle={item.partners !== '—' ? item.partners : item.date}
+                        onClick={() =>
+                          setSelectedMedia({
+                            isOpen: true,
+                            title: item.title,
+                            category: item.category,
+                            description: `${item.audience} — ${item.partners}`,
+                            images: item.gallery && item.gallery.length > 0 ? item.gallery : [item.image!],
+                          })
+                        }
+                      />
+                    </div>
+
                     {/* Date Badge */}
-                <div className={`mb-4 inline-flex items-center gap-2 rounded-full ${currentColor.bg} ${currentColor.darkBg} px-4 py-1.5 text-sm font-bold ${currentColor.text} ${currentColor.darkText}`}>
-                  <Calendar className="h-4 w-4" />
-                  {item.date}
-                </div>
+                    <div className={`mb-3 inline-flex items-center gap-2 rounded-full ${currentColor.bg} ${currentColor.darkBg} px-4 py-1.5 text-xs md:text-sm font-bold ${currentColor.text} ${currentColor.darkText} w-fit`}>
+                      <Calendar className="h-4 w-4" />
+                      {item.date}
+                    </div>
                     <h4 className="mb-2 text-xl font-bold text-slate-900 dark:text-white">{item.title}</h4>
                     <p className={`mb-4 text-base font-semibold ${currentColor.text} ${currentColor.darkText}`}>{item.category}</p>
 
@@ -334,6 +372,16 @@ export default function Projects() {
             </div>
           </motion.div>
         </AnimatePresence>
+
+        {/* Interactive Lightbox Modal */}
+        <MediaLightbox
+          isOpen={selectedMedia.isOpen}
+          onClose={() => setSelectedMedia((prev) => ({ ...prev, isOpen: false }))}
+          title={selectedMedia.title}
+          category={selectedMedia.category}
+          description={selectedMedia.description}
+          images={selectedMedia.images}
+        />
       </div>
     </section>
   );

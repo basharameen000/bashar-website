@@ -1,10 +1,24 @@
-export const totCertificates = [
+export interface CertificateItem {
+  id: string;
+  date: string;
+  title: string;
+  org: string;
+  location: string;
+  image?: string;
+  gallery?: string[];
+  pdfUrl?: string;
+  badge?: string;
+}
+
+export const totCertificates: CertificateItem[] = [
   {
     id: 'tot01',
     date: '22/4 – 2/5/ 2024',
     title: 'دورة تدريب مدربين في الحكم المحلي والمشاركة السياسية للشباب',
     org: 'مركز خدمات الشباب – منظمة شباب بلا حدود',
     location: 'تعز',
+    image: '/images/certificates/tot01.jpg',
+    badge: 'شهادة TOT',
   },
   {
     id: 'tot02',
@@ -12,13 +26,17 @@ export const totCertificates = [
     title: 'دورة تدريب مدربين في الحماية والصون',
     org: 'مركز تدريب وتأهيل الشباب – وزارة الشباب والرياضة – صندوق الأمم المتحدة للسكان',
     location: 'عدن',
+    image: '/images/certificates/tot02.jpg',
+    badge: 'شهادة دولية',
   },
   {
     id: 'tot03',
     date: '1 – 20 /3/ 2023',
-    title: 'دورة تدريب مدربين',
+    title: 'دورة تدريب مدربين معتمدة',
     org: 'مركز تدريب وتأهيل الشباب – صندوق الأمم المتحدة للسكان',
     location: 'عدن',
+    image: '/images/certificates/tot03.jpg',
+    badge: 'شهادة مدرب معتمد',
   },
   {
     id: 'tot04',
@@ -26,6 +44,8 @@ export const totCertificates = [
     title: 'تدريب TOT في التغيرات المناخية',
     org: 'مؤسسة تنمية القيادات الشابة YLDF',
     location: 'Online',
+    image: '/images/certificates/tot04.jpg',
+    badge: 'تدريب بيئي متخصص',
   },
   {
     id: 'tot05',
@@ -33,16 +53,20 @@ export const totCertificates = [
     title: 'دورة تدريب مدربين حول الحوكمة والمساءلة المجتمعية',
     org: 'منظمة أجيال بلا قات',
     location: 'تعز',
+    image: '/images/certificates/tot05.jpg',
+    badge: 'شهادة حوكمة',
   },
 ];
 
-export const climateCertificates = [
+export const climateCertificates: CertificateItem[] = [
   {
     id: 'cli01',
     date: '10/ 2023',
     title: 'دورة في أساسيات السلامة والأمن OHS',
     org: 'الصندوق الاجتماعي للتنمية',
     location: 'Online',
+    image: '/images/certificates/cli01.jpg',
+    badge: 'سلامة وأمن',
   },
   {
     id: 'cli02',
@@ -50,6 +74,8 @@ export const climateCertificates = [
     title: 'دورة في مؤشرات الاقتصاد الأخضر الشامل',
     org: 'UN CC: e-Learn',
     location: 'Online',
+    image: '/images/certificates/cli02.jpg',
+    badge: 'الأمم المتحدة',
   },
   {
     id: 'cli03',
@@ -57,16 +83,20 @@ export const climateCertificates = [
     title: 'دورة في بناء القدرة على التكيف مع تغير المناخ من خلال تخطيط التكيف القائم على النظام البيئي',
     org: 'UN CC: e-Learn',
     location: 'Online',
+    image: '/images/certificates/cli03.jpg',
+    badge: 'التكيف المناخي',
   },
 ];
 
-export const otherCourses = [
+export const otherCourses: CertificateItem[] = [
   {
     id: 'oth01',
     date: '10 – 19 /9/ 2024',
     title: 'دورة في البناء المؤسسي',
     org: 'وكالة تنمية المنشآت الصغيرة والأصغر – بدعم من اليونسكو',
     location: 'عدن',
+    image: '/images/certificates/oth01.jpg',
+    badge: 'تأهيل مؤسسي',
   },
   {
     id: 'oth02',
