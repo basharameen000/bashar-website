@@ -466,6 +466,12 @@ export const groupedTrainings = trainings.map((t) => ({
 
 export const creations = [
   {
+    title: 'التوأم الرقمي الهيدرولوجي لتعز 3D',
+    type: 'فن تفاعلي',
+    image: '/images/Taiz_Urban_Hydro_Twin_Map.png',
+    desc: 'نمذجة هيدرولوجية ثلاثية الأبعاد فائقة الدقة لمدينة تعز تحلل مسار 20,891 مجرى سيلي و424 مبنى مهدداً حتى البحر الأحمر مع تكامل خرائط جوجل.',
+  },
+  {
     title: 'شجرة المستقبل — تركيب فني',
     type: 'فن تفاعلي',
     image: '/images/creation-art.jpg',

@@ -1,0 +1,165 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.025,
+          13.518,
+          2238.0
+        ]
+      },
+      "properties": {
+        "id": "sabir",
+        "name": "قمة جبل صبر (المنبع الرئيسي)",
+        "name_en": "Jabal Sabir Summit (Source)",
+        "stage": "المنبع الجبلي",
+        "elev_m": 2238.0,
+        "dist_km": 0.0,
+        "desc": "أعلى نقطة تغذية هيدرولوجية لأحواض تعز الجبلية بارتفاع يتجاوز 2,200م."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.015,
+          13.571,
+          1450.0
+        ]
+      },
+      "properties": {
+        "id": "qahira",
+        "name": "قلعة القاهرة والنسيج القديم",
+        "name_en": "Al-Qahira Castle & Historic Core",
+        "stage": "المنحدر الحضري العلوي",
+        "elev_m": 1450.0,
+        "dist_km": 6.2,
+        "desc": "نقطة تجمع سيول منحدرات صبر الجنوبية وانطلاقها نحو شوارع وسط المدينة."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.017,
+          13.578,
+          1343.0
+        ]
+      },
+      "properties": {
+        "id": "saylah",
+        "name": "سائلة تعز الحضرية (حوض الأشرف وشارع 26)",
+        "name_en": "Saylat Taiz Urban Channel",
+        "stage": "القناة الحضرية الرئيسية",
+        "elev_m": 1343.0,
+        "dist_km": 7.4,
+        "desc": "المجرى الرئيسي لتصريف السيول داخل قلب المدينة ملتقى الجحملية والثورة."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.985,
+          13.642,
+          1125.0
+        ]
+      },
+      "properties": {
+        "id": "dam",
+        "name": "سد العامرية / سد العامرة (الهشمة)",
+        "name_en": "Al-Amiriyyah / Al-Amrah Dam (Al-Hashmah)",
+        "stage": "حاجز الحماية والتغذية",
+        "elev_m": 1125.0,
+        "dist_km": 15.8,
+        "desc": "سد مائي ركامي أنشئ عام 1996 لاحتجاز ذروة الفيضان وتغذية حوض الهشمة."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.82,
+          13.62,
+          810.0
+        ]
+      },
+      "properties": {
+        "id": "hajdah",
+        "name": "مضيق هجدة ووادي رسيان الأوسط",
+        "name_en": "Mid Wadi Rasyan (Hajdah Gorge)",
+        "stage": "الوادي الأوسط",
+        "elev_m": 810.0,
+        "dist_km": 39.5,
+        "desc": "الممر الصخري الذي يستقبل فائض سد العامرة ويتدفق غرباً عبر مديرية مقبنة."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.65,
+          13.43,
+          410.0
+        ]
+      },
+      "properties": {
+        "id": "barh",
+        "name": "حوض البرح وسهل شمير وموزع",
+        "name_en": "Al-Barh & Mawza Basin",
+        "stage": "الحوض السفلي",
+        "elev_m": 410.0,
+        "dist_km": 72.3,
+        "desc": "حوض فيضي واسع يستقبل روافد جبال مقبنة وشمير الغربية."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.42,
+          13.41,
+          95.0
+        ]
+      },
+      "properties": {
+        "id": "tihama",
+        "name": "دلتا تهامة الساحلية (موزع وذوباب)",
+        "name_en": "Tihama Coastal Delta",
+        "stage": "الدلتا الساحلية",
+        "elev_m": 95.0,
+        "dist_km": 104.0,
+        "desc": "السهل الطميي الرملي الشاسع المؤدي إلى الشريط الساحلي للبحر الأحمر."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.255,
+          13.385,
+          0.0
+        ]
+      },
+      "properties": {
+        "id": "redsea",
+        "name": "المصب النهائي في البحر الأحمر (شمال المخا)",
+        "name_en": "Red Sea Outfall (North of Mocha)",
+        "stage": "المصب البحري النهائي",
+        "elev_m": 0.0,
+        "dist_km": 125.4,
+        "desc": "نقطة انتهاء حوض وادي رسيان بالكامل على ساحل البحر الأحمر عند منسوب الصفر."
+      }
+    }
+  ]
+}

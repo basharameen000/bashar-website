@@ -1,0 +1,511 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.0152,
+          13.5714,
+          1450.0
+        ]
+      },
+      "properties": {
+        "id": "qahira",
+        "name": "قلعة القاهرة التاريخية",
+        "name_en": "Al-Qahira Historic Castle",
+        "category": "heritage",
+        "category_ar": "معلم تاريخي وأثري",
+        "icon": "🏰",
+        "elev_m": 1450.0,
+        "flood_clearance_m": 107.0,
+        "risk_status": "SAFE (آمن ومرفوع طبوغرافياً)",
+        "desc": "القلعة التاريخية الشامخة على السفح الشمالي لجبل صبر والمطلة على حوض المدينة القديمة."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.0125,
+          13.5738,
+          1395.0
+        ]
+      },
+      "properties": {
+        "id": "ashrafiyyah",
+        "name": "جامع ومدرسة الأشرفية",
+        "name_en": "Al-Ashrafiyyah Mosque & Madrasa",
+        "category": "heritage",
+        "category_ar": "معلم تاريخي وأثري",
+        "icon": "🕌",
+        "elev_m": 1395.0,
+        "flood_clearance_m": 52.0,
+        "risk_status": "SAFE (آمن)",
+        "desc": "تحفة العمارة الرسولية بمآذنها البيضاء الفريدة في سفح جبل صبر الغربي."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.0112,
+          13.5746,
+          1380.0
+        ]
+      },
+      "properties": {
+        "id": "mudhaffar",
+        "name": "جامع المظفر التاريخي",
+        "name_en": "Al-Mudhaffar Historic Mosque",
+        "category": "heritage",
+        "category_ar": "معلم تاريخي وأثري",
+        "icon": "🕌",
+        "elev_m": 1380.0,
+        "flood_clearance_m": 37.0,
+        "risk_status": "SAFE (آمن)",
+        "desc": "أحد أقدم جوامع تعز القديمة بقبابه الرسولية البيضاء ومدرسته التاريخية."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.0165,
+          13.5758,
+          1360.0
+        ]
+      },
+      "properties": {
+        "id": "bab_kabeer",
+        "name": "الباب الكبير (سور المدينة القديمة)",
+        "name_en": "Bab Al-Kabeer Gate",
+        "category": "heritage",
+        "category_ar": "معلم تاريخي وأثري",
+        "icon": "🚪",
+        "elev_m": 1360.0,
+        "flood_clearance_m": 17.0,
+        "risk_status": "ALERT (قريب من مسار السيل)",
+        "desc": "البوابة التاريخية الشرقية لمدينة تعز القديمة ونقطة التقاء الأسواق التراثية."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.0085,
+          13.5772,
+          1348.0
+        ]
+      },
+      "properties": {
+        "id": "bab_musa",
+        "name": "باب موسى التاريخي",
+        "name_en": "Bab Musa Gate",
+        "category": "heritage",
+        "category_ar": "معلم تاريخي وأثري",
+        "icon": "🚪",
+        "elev_m": 1348.0,
+        "flood_clearance_m": 5.0,
+        "risk_status": "CRITICAL (مهدد بغمر السيول)",
+        "desc": "البوابة التاريخية الغربية لتعز القديمة ونقطة العبور نحو وادي المدام والمسبح."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.0195,
+          13.579,
+          1355.0
+        ]
+      },
+      "properties": {
+        "id": "dar_irdhi",
+        "name": "دار العرضي التاريخي",
+        "name_en": "Dar Al-Irdhi Historical Palace",
+        "category": "heritage",
+        "category_ar": "معلم تاريخي وأثري",
+        "icon": "🏛️",
+        "elev_m": 1355.0,
+        "flood_clearance_m": 12.0,
+        "risk_status": "LOW (خطر منخفض)",
+        "desc": "مجمع القصور والمقرات التاريخية في حي العرضي المطل على السائلة."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.017,
+          13.578,
+          1343.0
+        ]
+      },
+      "properties": {
+        "id": "saylah_core",
+        "name": "سائلة تعز الحضرية (المجرى الرئيسي)",
+        "name_en": "Saylat Taiz Urban Channel Core",
+        "category": "hydro",
+        "category_ar": "منشأة هيدرولوجية وسيل",
+        "icon": "🌊",
+        "elev_m": 1343.0,
+        "flood_clearance_m": 0.0,
+        "risk_status": "FLASH FLOOD CHANNEL (مجرى تدفق السيول الرئيسي)",
+        "desc": "القناة الخرسانية الرئيسية لتصريف سيول جبل صبر والجحملية وثورة نحو سد العامرة."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.985,
+          13.642,
+          1125.0
+        ]
+      },
+      "properties": {
+        "id": "amrah_dam",
+        "name": "سد العامرة / العامرية (الهشمة)",
+        "name_en": "Al-Amrah / Al-Amiriyyah Dam",
+        "category": "hydro",
+        "category_ar": "منشأة هيدرولوجية وسيل",
+        "icon": "🏞️",
+        "elev_m": 1125.0,
+        "flood_clearance_m": 15.0,
+        "risk_status": "RETENTION RESERVOIR (سد احتجاز وتغذية مائية)",
+        "desc": "السد الركامي الاستراتيجي شمال المدينة لحصاد سيول السائلة وتغذية الحوض الجوفي."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.0168,
+          13.5815,
+          1340.0
+        ]
+      },
+      "properties": {
+        "id": "bridge_26sep",
+        "name": "جسر شارع 26 سبتمبر",
+        "name_en": "26th September Street Bridge",
+        "category": "hydro",
+        "category_ar": "منشأة هيدرولوجية وسيل",
+        "icon": "🌉",
+        "elev_m": 1340.0,
+        "flood_clearance_m": 2.5,
+        "risk_status": "CRITICAL (عنق زجاجة هيدروليكي)",
+        "desc": "الجسر الرئيسي المتقاطع مع السائلة الحضرية وشريان الحركة التجارية لقلب المدينة."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.0182,
+          13.5765,
+          1350.0
+        ]
+      },
+      "properties": {
+        "id": "bridge_hunood",
+        "name": "جسر الهنود (وادي المدام)",
+        "name_en": "Al-Hunood Bridge",
+        "category": "hydro",
+        "category_ar": "منشأة هيدرولوجية وسيل",
+        "icon": "🌉",
+        "elev_m": 1350.0,
+        "flood_clearance_m": 4.0,
+        "risk_status": "MEDIUM (ممر سيل فرعي)",
+        "desc": "جسر علوي حيوي يعبر سائلة وادي المدام باتجاه أسواق المدينة القديمة."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.004,
+          13.585,
+          1320.0
+        ]
+      },
+      "properties": {
+        "id": "bridge_maayin",
+        "name": "جسر وقناة وادي المعاين",
+        "name_en": "Wadi Al-Ma'ayin Bridge & Culvert",
+        "category": "hydro",
+        "category_ar": "منشأة هيدرولوجية وسيل",
+        "icon": "🌉",
+        "elev_m": 1320.0,
+        "flood_clearance_m": 3.0,
+        "risk_status": "HIGH (ملتقى روافد غربية)",
+        "desc": "معبر مائي وقناة تصريف تربط الأحياء الغربية بمجرى السائلة الشمالي."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.82,
+          13.62,
+          810.0
+        ]
+      },
+      "properties": {
+        "id": "rasyan_gorge",
+        "name": "مضيق ومفيض وادي رسيان (هجدة)",
+        "name_en": "Wadi Rasyan Gorge & Outfall",
+        "category": "hydro",
+        "category_ar": "منشأة هيدرولوجية وسيل",
+        "icon": "🌊",
+        "elev_m": 810.0,
+        "flood_clearance_m": 0.0,
+        "risk_status": "REGIONAL SPILLWAY (مفيض إقليمي)",
+        "desc": "الممر الصخري الضخم الذي يستقبل فائض سد العامرة ويتدفق غرباً نحو تهامة."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.021,
+          13.5785,
+          1365.0
+        ]
+      },
+      "properties": {
+        "id": "hawdh_ashraf",
+        "name": "حي حوض الأشرف",
+        "name_en": "Hawdh Al-Ashraf Urban Hub",
+        "category": "urban",
+        "category_ar": "حي وتجمع حضري",
+        "icon": "🏙️",
+        "elev_m": 1365.0,
+        "flood_clearance_m": 22.0,
+        "risk_status": "LOW (مركز تجاري حضري)",
+        "desc": "الحي المركزي ونقطة التجميع المائي الكبرى لسيول الجحملية قبل دخول السائلة."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.028,
+          13.574,
+          1420.0
+        ]
+      },
+      "properties": {
+        "id": "jahmaliyah",
+        "name": "حي الجحملية",
+        "name_en": "Al-Jahmaliyah District",
+        "category": "urban",
+        "category_ar": "حي وتجمع حضري",
+        "icon": "🏙️",
+        "elev_m": 1420.0,
+        "flood_clearance_m": 77.0,
+        "risk_status": "SAFE (منحدر شرقي علوي)",
+        "desc": "الحي الشرقي العريق على منحدرات صبر الشرقية ومسار الروافد المائية الحجرية."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.011,
+          13.586,
+          1335.0
+        ]
+      },
+      "properties": {
+        "id": "thawra_masbah",
+        "name": "حي الثورة والمسبح",
+        "name_en": "Al-Thawra & Al-Masbah Hub",
+        "category": "urban",
+        "category_ar": "حي وتجمع حضري",
+        "icon": "🏙️",
+        "elev_m": 1335.0,
+        "flood_clearance_m": 8.0,
+        "risk_status": "HIGH (موازٍ لقاع السائلة)",
+        "desc": "المركز السكني والتجاري الموازي لمجرى السائلة الغربي والأكثر تأثراً بارتفاع المنسوب."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.0135,
+          13.576,
+          1352.0
+        ]
+      },
+      "properties": {
+        "id": "wadi_madam",
+        "name": "وادي المدام التراثي",
+        "name_en": "Wadi Al-Madam Historic Valley",
+        "category": "urban",
+        "category_ar": "حي وتجمع حضري",
+        "icon": "🏘️",
+        "elev_m": 1352.0,
+        "flood_clearance_m": 9.0,
+        "risk_status": "HIGH (ممر تصريف داخلي)",
+        "desc": "الوادي التراثي الداخلي المغذي لمجرى السائلة والمحاط بالمنازل الحجرية التاريخية."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.992,
+          13.635,
+          1150.0
+        ]
+      },
+      "properties": {
+        "id": "hashamah_hawjalah",
+        "name": "عزلة الهشمة والحوجلة",
+        "name_en": "Al-Hashamah & Al-Hawjalah",
+        "category": "urban",
+        "category_ar": "حي وتجمع حضري",
+        "icon": "🌾",
+        "elev_m": 1150.0,
+        "flood_clearance_m": 25.0,
+        "risk_status": "MEDIUM (منطقة السد والزراعة)",
+        "desc": "المخرج الشمالي لحوض تعز ومنطقة السدود وحقول الزراعة المروية بمياه السيول."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.035,
+          13.582,
+          1390.0
+        ]
+      },
+      "properties": {
+        "id": "salah",
+        "name": "منطقة وقصور صالة",
+        "name_en": "Salah Historic Valley & Palaces",
+        "category": "urban",
+        "category_ar": "حي وتجمع حضري",
+        "icon": "🏡",
+        "elev_m": 1390.0,
+        "flood_clearance_m": 47.0,
+        "risk_status": "SAFE (منطقة حدائق وبساتين)",
+        "desc": "المنطقة الخضراء والقصور التاريخية شرق تعز ومسار الروافد الجبلية الشرقية."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.025,
+          13.518,
+          2238.0
+        ]
+      },
+      "properties": {
+        "id": "sabir_summit",
+        "name": "قمة جبل صبر (حصن العروس)",
+        "name_en": "Jabal Sabir Summit (Hisn Al-Aroos)",
+        "category": "nature",
+        "category_ar": "قمة وتضاريس جبلية",
+        "icon": "🏔️",
+        "elev_m": 2238.0,
+        "flood_clearance_m": 895.0,
+        "risk_status": "MOUNTAIN SOURCE (المنبع الجبلي الأعلى)",
+        "desc": "المنبع الهيدرولوجي الأعلى لحوض تعز بالكامل بارتفاع يتجاوز 2,200م فوق سطح البحر."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.65,
+          13.43,
+          410.0
+        ]
+      },
+      "properties": {
+        "id": "barh_basin",
+        "name": "حوض البرح وسهل شمير وموزع",
+        "name_en": "Al-Barh & Mawza Lower Basin",
+        "category": "nature",
+        "category_ar": "قمة وتضاريس جبلية",
+        "icon": "🏜️",
+        "elev_m": 410.0,
+        "flood_clearance_m": 0.0,
+        "risk_status": "FLOODPLAIN (سهل فيضي شاسع)",
+        "desc": "الحوض الفيضي الأوسط لوادي رسيان بعد التقائه بروافد جبال مقبنة وشمير."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.42,
+          13.41,
+          95.0
+        ]
+      },
+      "properties": {
+        "id": "tihama_delta",
+        "name": "دلتا تهامة الساحلية (موزع وذوباب)",
+        "name_en": "Tihama Coastal Delta",
+        "category": "nature",
+        "category_ar": "قمة وتضاريس جبلية",
+        "icon": "🌾",
+        "elev_m": 95.0,
+        "flood_clearance_m": 0.0,
+        "risk_status": "COASTAL OUTWASH (سهل طميي ساحلي)",
+        "desc": "السهل الزراعي الرسوبي الشاسع المؤدي إلى الشريط الساحلي للبحر الأحمر."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.255,
+          13.385,
+          0.0
+        ]
+      },
+      "properties": {
+        "id": "red_sea_mouth",
+        "name": "مصب البحر الأحمر (شمال المخا)",
+        "name_en": "Red Sea Outfall (North of Mocha)",
+        "category": "nature",
+        "category_ar": "مصب بحري نهائي",
+        "icon": "⚓",
+        "elev_m": 0.0,
+        "flood_clearance_m": 0.0,
+        "risk_status": "SEA LEVEL (منسوب الصفر البحري)",
+        "desc": "النهاية البحرية الكبرى لمسار تصريف حوض تعز ووادي رسيان بعد رحلة بطول 125.4 كم."
+      }
+    }
+  ]
+}

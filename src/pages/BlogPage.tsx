@@ -669,23 +669,27 @@ export default function BlogPage() {
 
                 {/* Interactive Engine Launcher Banner */}
                 {activeReadingPost.interactiveUrl && (
-                  <div className="p-5 rounded-2xl bg-gradient-to-r from-amber-500/15 via-amber-500/5 to-emerald-500/15 border border-amber-500/40 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+                  <div className="p-5 rounded-2xl bg-gradient-to-r from-emerald-500/15 via-teal-500/5 to-sky-500/15 border border-emerald-500/40 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
                     <div className="flex items-center gap-3 text-right">
-                      <div className="p-3 rounded-2xl bg-amber-500 text-slate-950 font-bold shadow-md shadow-amber-500/25 shrink-0">
+                      <div className="p-3 rounded-2xl bg-emerald-500 text-slate-950 font-bold shadow-md shadow-emerald-500/25 shrink-0">
                         <Sparkles className="w-6 h-6" />
                       </div>
                       <div>
                         <div className="flex items-center gap-2 mb-1">
                           <h4 className="font-extrabold text-base text-slate-900 dark:text-white">
-                            محرك كوبرنيكوس التوليدي الحي (Copernicus Live Engine)
+                            {activeReadingPost.id === 'post-taiz-urban-hydro-twin-3d'
+                              ? 'التوأم الرقمي الهيدرولوجي التفاعلي (Taiz 3D Hydro-Twin)'
+                              : 'محرك كوبرنيكوس التوليدي الحي (Copernicus Live Engine)'}
                           </h4>
                           <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-800 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-950/60 px-2.5 py-0.5 rounded-full border border-emerald-500/30">
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                            API متصل ومصادق
+                            {activeReadingPost.id === 'post-taiz-urban-hydro-twin-3d' ? '3D WebGIS حي ومباشر' : 'API متصل ومصادق'}
                           </span>
                         </div>
                         <p className="text-xs text-slate-600 dark:text-slate-300">
-                          شاهد كامل بيانات الـ 47 عاماً لحظياً عبر بوابة الأقمار الصناعية وتحكم في الأنماط الجيولوجية
+                          {activeReadingPost.id === 'post-taiz-urban-hydro-twin-3d'
+                            ? 'استعرض 20,891 مجرى سيلي و424 مبنى مهدداً مع التبديل السلس لخرائط جوجل'
+                            : 'شاهد كامل بيانات الـ 47 عاماً لحظياً عبر بوابة الأقمار الصناعية وتحكم في الأنماط الجيولوجية'}
                         </p>
                       </div>
                     </div>
@@ -693,9 +697,13 @@ export default function BlogPage() {
                       href={activeReadingPost.interactiveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs md:text-sm shadow-md transition shrink-0"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs md:text-sm shadow-md transition shrink-0"
                     >
-                      <span>تشغيل المرصد التفاعلي</span>
+                      <span>
+                        {activeReadingPost.id === 'post-taiz-urban-hydro-twin-3d'
+                          ? 'تشغيل التوأم الرقمي 3D'
+                          : 'تشغيل المرصد التفاعلي'}
+                      </span>
                       <ArrowRight className="w-4 h-4 rotate-180" />
                     </a>
                   </div>
