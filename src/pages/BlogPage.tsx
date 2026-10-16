@@ -519,6 +519,18 @@ export default function BlogPage() {
                 </div>
 
                 <div className="flex items-center gap-2">
+                  {activeReadingPost.pdfUrl && (
+                    <a
+                      href={activeReadingPost.pdfUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      download
+                      className="p-2 text-slate-400 hover:text-emerald-500 rounded-full transition"
+                      title="تحميل الورقة كملف"
+                    >
+                      <Download className="w-5 h-5 text-emerald-500" />
+                    </a>
+                  )}
                   <button
                     onClick={() => toggleBookmark(activeReadingPost.id)}
                     className="p-2 text-slate-400 hover:text-emerald-500 rounded-full transition"
