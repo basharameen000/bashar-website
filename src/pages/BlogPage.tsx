@@ -721,6 +721,40 @@ export default function BlogPage() {
                   </div>
                 )}
 
+                {/* Dedicated PDF Download Callout Banner */}
+                {activeReadingPost.pdfUrl && (
+                  <div className="p-5 rounded-2xl bg-gradient-to-r from-sky-500/15 via-indigo-500/10 to-emerald-500/15 border border-sky-500/30 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+                    <div className="flex items-center gap-3 text-right">
+                      <div className="p-3 rounded-2xl bg-sky-500 text-slate-950 font-bold shadow-md shadow-sky-500/25 shrink-0">
+                        <FileText className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2 mb-1">
+                          <h4 className="font-extrabold text-base text-slate-900 dark:text-white">
+                            الوثيقة الأصلية الكاملة (نسخة PDF الرسمية المعتمدة)
+                          </h4>
+                          <span className="inline-flex items-center gap-1 text-[11px] font-bold text-sky-800 dark:text-sky-300 bg-sky-100 dark:bg-sky-950/60 px-2.5 py-0.5 rounded-full border border-sky-500/30">
+                            18 صفحة كاملة
+                          </span>
+                        </div>
+                        <p className="text-xs text-slate-600 dark:text-slate-300">
+                          يمكنك تنزيل وقراءة النسخة الأصلية للورقة بملف PDF المرفق وتصفح الجداول والمراجع والملاحق القانونية
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href={activeReadingPost.pdfUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      download
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-extrabold text-xs md:text-sm shadow-md shadow-sky-600/25 transition shrink-0"
+                    >
+                      <Download className="w-4 h-4" />
+                      <span>تحميل ورقة السياسات PDF</span>
+                    </a>
+                  </div>
+                )}
+
                 {/* Rich Content Render */}
                 <div className="text-slate-700 dark:text-slate-300 leading-8 space-y-4 text-base md:text-lg font-normal">
                   {activeReadingPost.content.split('\n\n').map((paragraph, i) => {

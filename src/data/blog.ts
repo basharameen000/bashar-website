@@ -166,10 +166,10 @@ export const blogPosts: BlogPost[] = [
       name: 'بشار نبيل عبدالصمد',
       role: 'مُعِد الورقة — باحث السياسات البيئية والإدماج',
     },
-    image: '/images/governance_leadership.jpg',
+    image: '/images/deaf_women_climate_policy_cover.png',
     tags: ['ورقة سياسات', 'ذوي الإعاقة السمعية', 'النوع الاجتماعي', 'التغير المناخي', 'عدن', 'الإنذار المبكر'],
     featured: false,
-    pdfUrl: '/Aden_Flood_Paradox_Analytical_Paper.md',
+    pdfUrl: '/Policy_Paper_Climate_Impact_Deaf_Women_Aden_2023.pdf',
   },
   {
     id: 'post-taiz-urban-hydro-twin-3d',
